@@ -1,0 +1,43 @@
+[
+  {
+    "id": "staria",
+    "name": "현대 스타리아",
+    "sub_title": "1~5인 소규모 가족 추천",
+    "price": "추후 업데이트",
+    "description": "승차감 위주의 프리미엄 밴으로, 소규모 가족이나 짐이 적은 게스트에게 안성맞춤입니다. 공항에서 숙소까지 편안한 이동을 약속합니다.",
+    "image": "img/services/staria/0.jpg",
+    "images": [
+      "img/services/staria/0.jpg",
+      "img/services/staria/1.jpg",
+      "img/services/staria/2.jpg",
+      "img/services/staria/interior.png"
+    ]
+  },
+  {
+    "id": "solati",
+    "name": "현대 쏠라티",
+    "sub_title": "다인원 및 골프 투어 추천",
+    "price": "추후 업데이트",
+    "description": "넓은 실내 공간과 넉넉한 적재 공간을 자랑합니다. 캐리어 등 짐이 많은 장기 투숙객이나 대가족, 단체 투어에 최적화된 대형 차량입니다.",
+    "image": "img/services/solati/0.jpg",
+    "images": [
+      "img/services/solati/0.jpg",
+      "img/services/solati/1.jpg",
+      "img/services/solati/2.jpg"
+    ]
+  },
+  {
+    "id": "sprinter",
+    "name": "메르세데스-벤츠 스프린터",
+    "sub_title": "VIP 의전 및 단체 게스트 추천",
+    "price": "추후 업데이트",
+    "description": "최고급 럭셔리 모빌리티의 정수. VIP 게스트 의전이나 프리미엄 관광을 위해 압도적인 공간감과 최상의 편안함을 제공합니다.",
+    "image": "img/services/sprinter/0.jpg",
+    "images": [
+      "img/services/sprinter/0.jpg",
+      "img/services/sprinter/1.jpg",
+      "img/services/sprinter/2.jpg",
+      "img/services/sprinter/3.jpg"
+    ]
+  }
+]
