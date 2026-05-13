@@ -10,7 +10,9 @@
       "img/services/staria/0.jpg",
       "img/services/staria/1.jpg",
       "img/services/staria/2.jpg",
-      "img/services/staria/interior.png"
+      "img/services/staria/3.jpg",
+      "img/services/staria/4.jpg",
+      "img/services/staria/5.jpg"
     ]
   },
   {
@@ -22,8 +24,7 @@
     "image": "img/services/solati/0.jpg",
     "images": [
       "img/services/solati/0.jpg",
-      "img/services/solati/1.jpg",
-      "img/services/solati/2.jpg"
+      "img/services/solati/1.jpg"
     ]
   },
   {
@@ -35,9 +36,7 @@
     "image": "img/services/sprinter/0.jpg",
     "images": [
       "img/services/sprinter/0.jpg",
-      "img/services/sprinter/1.jpg",
-      "img/services/sprinter/2.jpg",
-      "img/services/sprinter/3.jpg"
+      "img/services/sprinter/1.png"
     ]
   }
 ]
