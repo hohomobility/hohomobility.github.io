@@ -124,7 +124,7 @@
             });
         });
 
-        // type 파라미터를 추가하여 사진(image)과 가격표(price)를 분기 처리
+// type 파라미터를 추가하여 사진(image)과 가격표(price)를 분기 처리
         function openModal(index, type) {
             const item = allData[index];
             const modal = document.getElementById('dynamic-modal');
@@ -149,6 +149,10 @@
                 `).join('');
 
                 content.innerHTML = `
+                    <!-- 부가세 별도 안내 문구 추가 -->
+                    <div class="flex justify-end mb-2">
+                        <span class="text-xs font-bold text-red-500 bg-red-50 px-2 py-1 rounded border border-red-100">※ 부가세(VAT) 별도</span>
+                    </div>
                     <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
                         <table class="w-full text-left border-collapse">
                             <thead class="bg-[#102C57] text-white">
@@ -169,7 +173,7 @@
             modal.classList.remove('hidden');
             document.body.classList.add('modal-open');
         }
-
+        
         function closeModal() {
             document.getElementById('dynamic-modal').classList.add('hidden');
             document.body.classList.remove('modal-open');
