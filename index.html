@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>추가 비용 Zero, 서비스는 Full | 호호모빌리티</title>
+    <title>호호모빌리티 | 추가 비용 Zero, 서비스는 Full</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
@@ -60,16 +60,16 @@
     </header>
 
     <main class="flex-grow pt-24">
-        <!-- 메인 히어로 섹션 (상단 이미지, 하단 텍스트 구조로 변경) -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-            <div class="flex flex-col items-center gap-10">
-                <!-- 1. 이미지 영역 (상단) -->
-                <div class="w-full max-w-4xl">
-                    <img src="img/home/lineup.jpg" alt="HOHO mobility Premium Fleet" class="w-full h-auto rounded-3xl shadow-2xl object-cover">
-                </div>
-                
-                <!-- 2. 텍스트 영역 (하단 중앙 정렬) -->
-                <div class="w-full max-w-3xl text-center mt-4">
+        <!-- 메인 히어로 섹션 (이미지가 화면에 꽉 차게 분리) -->
+        <section class="w-full">
+            <!-- 1. 이미지 영역 (컨테이너 밖으로 나와서 화면 좌우 폭 100% 사용) -->
+            <div class="w-full bg-[#111111]">
+                <img src="img/home/lineup.jpg" alt="HOHO mobility Premium Fleet" class="w-full max-h-[600px] object-cover mx-auto">
+            </div>
+            
+            <!-- 2. 텍스트 영역 (기존 컨테이너 안에서 중앙 정렬 유지) -->
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+                <div class="w-full max-w-3xl mx-auto text-center">
                     <p class="text-[#2E5C9E] font-bold tracking-widest uppercase mb-3">외국인 게스트 전용 공항 픽업 솔루션</p>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#102C57] tracking-tight mb-6 leading-tight">
                         추가 비용 Zero,<br/><span class="text-[#2E5C9E]">서비스는 Full</span>
