@@ -59,53 +59,76 @@
         </div>
     </header>
 
-    <main class="flex-grow pt-32 pb-16 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-black text-[#102C57] mb-8 border-b pb-4 tracking-tighter text-center">취소 및 환불 규정</h2>
-            
-            <div class="bg-white p-8 md:p-12 rounded-2xl border border-gray-100 space-y-8 shadow-lg">
-                
-                <!-- Notice Banner -->
-                <div class="bg-blue-50 p-5 border border-blue-100 rounded-xl text-sm md:text-base text-blue-800 font-medium flex items-start md:items-center gap-3">
-                    <span class="text-xl leading-none">💡</span> 
-                    <p>무형의 서비스 및 맞춤형 배차 특성상 아래 환불 규정이 엄격하게 적용되오니, 예약 전 반드시 확인해 주시기 바랍니다.</p>
-                </div>
-                
-                <!-- Policy Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <!-- 100% Refund Card -->
-                    <div class="bg-green-50/50 border border-green-200 rounded-2xl p-8 text-center flex flex-col justify-center items-center hover:bg-green-50 transition duration-300 shadow-sm">
-                        <div class="text-green-800 font-bold text-lg mb-3">이용 24시간 전까지 취소 시</div>
-                        <div class="text-green-600 font-black text-3xl md:text-4xl">100% 환불</div>
-                        <div class="text-green-700 text-sm mt-3 font-medium px-4 py-1 bg-green-100 rounded-full">결제 금액 전액 환불</div>
-                    </div>
-
-                    <!-- No Refund Card -->
-                    <div class="bg-red-50/50 border border-red-200 rounded-2xl p-8 text-center flex flex-col justify-center items-center hover:bg-red-50 transition duration-300 shadow-sm">
-                        <div class="text-red-800 font-bold text-lg mb-3">당일 취소 및 노쇼(No-show)</div>
-                        <div class="text-red-500 font-black text-3xl md:text-4xl">환불 불가</div>
-                        <div class="text-red-600 text-sm mt-3 font-medium px-4 py-1 bg-red-100 rounded-full">예약금 반환 불가</div>
+    <main class="flex-grow pt-24">
+        <!-- 메인 히어로 섹션 -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <p class="text-[#2E5C9E] font-bold tracking-widest uppercase mb-3">외국인 게스트 전용 공항 픽업 솔루션</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#102C57] tracking-tight mb-6 leading-tight">
+                        추가 비용 Zero,<br/><span class="text-[#2E5C9E]">서비스는 Full</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                        게스트가 공항에 도착하는 순간부터 목적지까지.<br class="hidden md:block">
+                        예상치 못한 추가 비용 걱정 없이, 편안하고 완벽한 첫인상을 제공합니다.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="services" class="px-8 py-4 bg-[#102C57] text-white font-bold rounded-xl shadow-lg hover:bg-[#1a3e75] transition transform hover:-translate-y-1 text-center">
+                            All-Inclusive 혜택 보기
+                        </a>
+                        <a href="contact" class="px-8 py-4 bg-white text-[#102C57] border-2 border-[#102C57] font-bold rounded-xl hover:bg-slate-50 transition transform hover:-translate-y-1 text-center">
+                            배차 예약 문의
+                        </a>
                     </div>
                 </div>
-
-                <!-- Process Section -->
-                <div class="pt-8 border-t border-slate-100 space-y-4">
-                    <h3 class="font-bold text-[#102C57] text-lg flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#2E5C9E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        환불 절차 안내
-                    </h3>
-                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                        <p class="text-sm md:text-base text-slate-600 leading-relaxed">
-                            환불 요청은 <strong>공식 카카오톡 채널, 왓츠앱</strong> 또는 <strong>고객센터 전화(010-6674-8253)</strong>를 통해서만 접수받습니다.<br class="hidden md:block">
-                            접수 확인 후 결제 수단에 따라 근무일 기준 <strong>3~5일 이내</strong>에 처리가 완료됩니다.
-                        </p>
-                    </div>
+                <div class="lg:w-1/2 w-full">
+                    <!-- 변경된 이미지 이름 적용: home_lineup.jpg -->
+                    <img src="img/home/lineup.jpg" alt="HOHO mobility Premium Fleet" class="w-full h-auto rounded-3xl shadow-2xl object-cover">
                 </div>
-
             </div>
-        </div>
+        </section>
+        
+        <!-- 3가지 핵심 강점 요약 섹션 -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center transition hover:shadow-md">
+                    <div class="text-5xl mb-4">🙋‍♂️</div>
+                    <h3 class="text-xl font-bold text-[#102C57] mb-2">100% 무료 피켓 서비스</h3>
+                    <p class="text-slate-600 text-sm">낯선 공항에서 헤매지 않도록 게스트의 성함이 적힌 피켓을 들고 입구에서 직접 맞이합니다.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center transition hover:shadow-md">
+                    <div class="text-5xl mb-4">🆓</div>
+                    <h3 class="text-xl font-bold text-[#102C57] mb-2">주차비 & 운임료 0원</h3>
+                    <p class="text-slate-600 text-sm">현장에서 결제하는 번거로움 없이, 모든 톨게이트 비용과 주차비가 예약 금액에 포함되어 있습니다.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 text-center transition hover:shadow-md">
+                    <div class="text-5xl mb-4">🚐</div>
+                    <h3 class="text-xl font-bold text-[#102C57] mb-2">압도적인 차량 라인업</h3>
+                    <p class="text-slate-600 text-sm">스타리아부터 벤츠 스프린터까지. 인원과 짐 규모에 상관없이 즉시 배차가 가능한 대규모 플릿을 운영합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 피켓 서비스 상세 섹션 -->
+        <section class="bg-white py-20 border-t border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 order-2 md:order-1">
+                        <!-- 변경된 이미지 이름 적용: homepicket.jpg -->
+                        <img src="img/home/picket.jpg" alt="Airport Meet and Greet Pickup Sign" class="w-full h-auto rounded-3xl shadow-lg object-cover">
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2 text-center md:text-left">
+                        <div class="inline-block bg-[#EFF6FF] text-[#2E5C9E] font-bold px-4 py-2 rounded-full mb-4 text-sm">안심 케어 솔루션</div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#102C57] mb-6 leading-tight">입국장에서 만나는<br>가장 든든한 환영</h2>
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            한국을 처음 방문하는 외국인 게스트도 길을 잃을 걱정이 없습니다.<br>
+                            게스트의 영문 이름이 적힌 전용 피켓을 들고, <strong>입국장 게이트 바로 앞에서 베테랑 기사님이 직접 맞이합니다.</strong>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-[#0A1A33] text-slate-400 py-12 mt-auto">
