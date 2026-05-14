@@ -60,10 +60,16 @@
     </header>
 
     <main class="flex-grow pt-24">
-        <!-- 메인 히어로 섹션 -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2 text-center lg:text-left">
+        <!-- 메인 히어로 섹션 (상단 이미지, 하단 텍스트 구조로 변경) -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+            <div class="flex flex-col items-center gap-10">
+                <!-- 1. 이미지 영역 (상단) -->
+                <div class="w-full max-w-4xl">
+                    <img src="img/home/lineup.jpg" alt="HOHO mobility Premium Fleet" class="w-full h-auto rounded-3xl shadow-2xl object-cover">
+                </div>
+                
+                <!-- 2. 텍스트 영역 (하단 중앙 정렬) -->
+                <div class="w-full max-w-3xl text-center mt-4">
                     <p class="text-[#2E5C9E] font-bold tracking-widest uppercase mb-3">외국인 게스트 전용 공항 픽업 솔루션</p>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#102C57] tracking-tight mb-6 leading-tight">
                         추가 비용 Zero,<br/><span class="text-[#2E5C9E]">서비스는 Full</span>
@@ -72,7 +78,7 @@
                         게스트가 공항에 도착하는 순간부터 목적지까지.<br class="hidden md:block">
                         예상치 못한 추가 비용 걱정 없이, 편안하고 완벽한 첫인상을 제공합니다.
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
                         <a href="services" class="px-8 py-4 bg-[#102C57] text-white font-bold rounded-xl shadow-lg hover:bg-[#1a3e75] transition transform hover:-translate-y-1 text-center">
                             All-Inclusive 혜택 보기
                         </a>
@@ -80,10 +86,6 @@
                             배차 예약 문의
                         </a>
                     </div>
-                </div>
-                <div class="lg:w-1/2 w-full">
-                    <!-- 변경된 이미지 이름 적용: home_lineup.jpg -->
-                    <img src="img/home/lineup.jpg" alt="HOHO mobility Premium Fleet" class="w-full h-auto rounded-3xl shadow-2xl object-cover">
                 </div>
             </div>
         </section>
@@ -114,7 +116,6 @@
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2 order-2 md:order-1">
-                        <!-- 변경된 이미지 이름 적용: homepicket.jpg -->
                         <img src="img/home/picket.jpg" alt="Airport Meet and Greet Pickup Sign" class="w-full h-auto rounded-3xl shadow-lg object-cover">
                     </div>
                     <div class="md:w-1/2 order-1 md:order-2 text-center md:text-left">
@@ -124,7 +125,6 @@
                             한국을 처음 방문하는 외국인 게스트도 길을 잃을 걱정이 없습니다.<br>
                             게스트의 영문 이름이 적힌 전용 피켓을 들고, <strong>입국장 게이트 바로 앞에서 베테랑 기사님이 직접 맞이합니다.</strong>
                         </p>
-
                     </div>
                 </div>
             </div>
