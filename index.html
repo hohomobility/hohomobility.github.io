@@ -60,10 +60,11 @@
     </header>
 
     <main class="flex-grow pt-24">
-        <!-- 메인 히어로 섹션 -->
+        <!-- 메인 히어로 섹션 (이미지 잘림 해결) -->
         <section class="w-full">
-            <div class="w-full bg-[#111111]">
-                <img src="img/home/lineup.jpg" alt="HOHO mobility Premium Fleet" class="w-full max-h-[600px] object-cover mx-auto">
+            <div class="w-full">
+                <!-- w-full과 h-auto를 사용하여 원본 비율 유지 (object-cover 제거) -->
+                <img src="img/home/lineup.jpg" alt="HOHO mobility Premium Fleet" class="w-full h-auto block mx-auto">
             </div>
             
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
