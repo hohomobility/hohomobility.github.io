@@ -43,21 +43,20 @@
                 <p class="text-lg text-slate-600">모든 차량에는 <strong>무료 피켓 맞이 및 주차/톨게이트 비용이 포함</strong>되어 있습니다.</p>
             </div>
             
-            <!-- 변경된 부분: grid에서 flex-col(1열 나열)로 변경 -->
             <div id="service-product-list" class="flex flex-col gap-12"></div>
             
         </section>
     </main>
 
-    <!-- 차량 이미지 나열 모달 -->
-    <div id="image-modal" class="fixed inset-0 z-[60] hidden bg-black/80 flex items-center justify-center p-4">
+    <!-- 공통 다용도 모달 (사진 & 가격표 겸용) -->
+    <div id="dynamic-modal" class="fixed inset-0 z-[60] hidden bg-black/80 flex items-center justify-center p-4">
         <div class="bg-white w-full max-w-3xl max-h-[85vh] rounded-3xl overflow-hidden flex flex-col shadow-2xl">
             <div class="p-6 border-b flex justify-between items-center bg-white sticky top-0 z-10">
-                <h3 id="modal-title" class="text-xl font-bold text-[#102C57]">차량 상세 사진</h3>
+                <h3 id="modal-title" class="text-xl font-bold text-[#102C57]">안내</h3>
                 <button onclick="closeModal()" class="text-slate-400 hover:text-black text-3xl leading-none">&times;</button>
             </div>
             <div id="modal-content" class="overflow-y-auto p-4 md:p-8 space-y-6 bg-slate-50">
-                <!-- JSON의 images 배열이 여기에 렌더링됨 -->
+                <!-- JS에서 컨텐츠 삽입 -->
             </div>
             <div class="p-6 border-t bg-white flex flex-col sm:flex-row gap-3">
                 <button onclick="closeModal()" class="flex-1 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition">닫기</button>
@@ -96,12 +95,11 @@
                 allData = data;
                 const container = document.getElementById('service-product-list');
                 
-                // 1열(가로로 넓게) 배치되는 디자인으로 클래스 수정
                 container.innerHTML = data.map((item, index) => `
                     <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row transition hover:shadow-xl group">
                         
-                        <!-- 좌측: 큼직한 이미지 영역 -->
-                        <div class="md:w-1/2 h-72 md:h-auto min-h-[320px] overflow-hidden bg-slate-100 cursor-pointer relative" onclick="openModal(${index})">
+                        <!-- 좌측: 큼직한 이미지 영역 (클릭 시 사진 띄우기) -->
+                        <div class="md:w-1/2 h-72 md:h-auto min-h-[320px] overflow-hidden bg-slate-100 cursor-pointer relative" onclick="openModal(${index}, 'image')">
                             <img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/800x600?text=Vehicle'">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 flex items-center justify-center">
                                 <span class="bg-white/90 text-[#102C57] font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">상세 사진 보기 🔍</span>
@@ -111,12 +109,12 @@
                         <!-- 우측: 텍스트 및 버튼 영역 -->
                         <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                             <p class="text-sm font-bold text-[#2E5C9E] mb-2">${item.sub_title}</p>
-                            <h3 class="text-3xl font-black text-[#102C57] mb-3">${item.name}</h3>
-                            <div class="text-slate-400 text-lg mb-6 font-bold bg-slate-50 inline-block px-4 py-2 rounded-lg border border-slate-100 w-fit">${item.price}</div>
+                            <h3 class="text-3xl font-black text-[#102C57] mb-6">${item.name}</h3>
                             <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8 flex-grow">${item.description}</p>
                             
                             <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                <button onclick="openModal(${index})" class="flex-1 bg-white border-2 border-[#102C57] text-[#102C57] font-bold py-3.5 rounded-xl hover:bg-slate-50 transition">사진 자세히 보기</button>
+                                <!-- 사진 보기 버튼을 가격 안내 버튼으로 변경 -->
+                                <button onclick="openModal(${index}, 'price')" class="flex-1 bg-white border-2 border-[#102C57] text-[#102C57] font-bold py-3.5 rounded-xl hover:bg-slate-50 transition">요금표 안내</button>
                                 <a href="contact" class="flex-[1.5] bg-[#102C57] text-white text-center font-bold py-3.5 rounded-xl hover:bg-[#1a3e75] transition flex items-center justify-center">이 차량 상담 문의</a>
                             </div>
                         </div>
@@ -126,24 +124,54 @@
             });
         });
 
-        function openModal(index) {
+        // type 파라미터를 추가하여 사진(image)과 가격표(price)를 분기 처리
+        function openModal(index, type) {
             const item = allData[index];
-            const modal = document.getElementById('image-modal');
+            const modal = document.getElementById('dynamic-modal');
             const title = document.getElementById('modal-title');
             const content = document.getElementById('modal-content');
 
-            title.innerText = `${item.name} 상세 사진`;
-            
-            content.innerHTML = item.images.map(path => `
-                <img src="${path}" class="w-full rounded-2xl shadow-md border-4 border-white" onerror="this.style.display='none'">
-            `).join('');
+            if (type === 'image') {
+                title.innerText = `${item.name} 상세 사진`;
+                content.innerHTML = item.images.map(path => `
+                    <img src="${path}" class="w-full rounded-2xl shadow-md border-4 border-white" onerror="this.style.display='none'">
+                `).join('');
+                
+            } else if (type === 'price') {
+                title.innerText = `${item.name} 구간별 단가표 (편도)`;
+                
+                // 표에 들어갈 내용 생성
+                let tableRows = item.pricing.map(p => `
+                    <tr class="border-b border-slate-100 hover:bg-slate-50 transition">
+                        <td class="py-3 px-4 text-sm text-slate-700 font-medium break-keep">${p.region}</td>
+                        <td class="py-3 px-4 text-sm font-bold text-[#102C57] text-right whitespace-nowrap">${p.price}</td>
+                    </tr>
+                `).join('');
+
+                content.innerHTML = `
+                    <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+                        <table class="w-full text-left border-collapse">
+                            <thead class="bg-[#102C57] text-white">
+                                <tr>
+                                    <th class="py-3 px-4 text-sm font-bold w-2/3">도착지 (인천공항 출발 기준)</th>
+                                    <th class="py-3 px-4 text-sm font-bold w-1/3 text-right">요금</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${tableRows}
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4">* 위 요금은 톨게이트 및 주차비가 모두 포함된 최종 확정 금액입니다.</p>
+                `;
+            }
 
             modal.classList.remove('hidden');
             document.body.classList.add('modal-open');
         }
 
         function closeModal() {
-            document.getElementById('image-modal').classList.add('hidden');
+            document.getElementById('dynamic-modal').classList.add('hidden');
             document.body.classList.remove('modal-open');
         }
 
