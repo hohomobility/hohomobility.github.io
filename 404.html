@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>페이지를 찾을 수 없습니다 | 호호모빌리티</title>
     <script type="text/javascript">
         async function tryRedirect() {
@@ -38,13 +39,20 @@
         tryRedirect();
     </script>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; color: #64748b; }
-        .loader { border: 3px solid #f3f3f3; border-top: 3px solid #2E5C9E; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; margin-right: 12px; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        body { font-family: sans-serif; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; color: #64748b; text-align: center; }
+        
+        /* 자동차 이모지 스타일 및 애니메이션 */
+        .car-emoji { font-size: 4rem; animation: moveCar 2s infinite linear; display: inline-block; }
+        @keyframes moveCar { 0% { transform: translateX(-100%); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateX(100vw); opacity: 0; } }
+        
+        /* 멘트 스타일 */
+        p { margin: 10px 0; }
     </style>
 </head>
 <body>
-    <div class="loader"></div>
-    <p>가장 가까운 페이지로 이동 중입니다...</p>
+    <span class="car-emoji">🚗</span><br>
+
+    <p>가장 적절한 페이지로 연결 중입니다. 잠시만 기다려 주세요.</p>
+    <p>Connecting you to the best page. Please wait a moment.</p>
 </body>
 </html>
