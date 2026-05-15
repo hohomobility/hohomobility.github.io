@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>호호모빌리티 | Services</title>
+    <title>HOHO Mobility | Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
@@ -12,10 +12,11 @@
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
-    <!-- Header -->
     <header class="bg-white/90 backdrop-blur-md border-b border-gray-200 fixed w-full top-0 z-50 shadow-sm text-nowrap">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
-            <a href="index" class="block"><img src="img/logo.jpg" alt="Logo" class="h-16 md:h-20 w-auto object-contain"></a>
+            <a href="index" class="block">
+                <img src="/img/logo.jpg" alt="Logo" class="h-16 md:h-20 w-auto object-contain">
+            </a>
             <div class="flex items-center gap-4 md:gap-8">
                 <nav class="hidden md:flex space-x-6 lg:space-x-8">
                     <a href="index" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Home</a>
@@ -24,9 +25,9 @@
                     <a href="contact" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Contact</a>
                 </nav>
                 <div class="flex items-center text-[10px] md:text-xs font-bold gap-2.5 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
-                    <a href="services" class="text-[#102C57] flex items-center gap-1"><img src="https://flagcdn.com/w20/kr.png" width="16" alt="KO"> <span>KO</span></a>
+                    <a href="/services" class="text-slate-400 hover:text-[#102C57] flex items-center gap-1"><img src="https://flagcdn.com/w20/kr.png" width="16" alt="KO"> <span>KO</span></a>
                     <span class="text-slate-300">|</span>
-                    <a href="en/services" class="text-slate-400 hover:text-[#102C57] flex items-center gap-1"><img src="https://flagcdn.com/w20/us.png" width="16" alt="EN"> <span>EN</span></a>
+                    <a href="services" class="text-[#102C57] flex items-center gap-1"><img src="https://flagcdn.com/w20/us.png" width="16" alt="EN"> <span>EN</span></a>
                 </div>
             </div>
         </div>
@@ -35,8 +36,8 @@
     <main class="flex-grow pt-32 pb-24">
         <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#102C57] mb-4 tracking-tighter font-black">맞춤형 풀라인업 배차 서비스</h2>
-                <p class="text-lg text-slate-600">모든 차량에는 <strong>무료 피켓 맞이 및 주차/톨게이트 비용이 포함</strong>되어 있습니다.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#102C57] mb-4 tracking-tighter font-black">Customized Full-Lineup Dispatch Service</h2>
+                <p class="text-lg text-slate-600">All vehicles include a <strong>free meet & greet picket service and all parking/toll fees</strong>.</p>
             </div>
             
             <div id="service-product-list" class="flex flex-col gap-12"></div>
@@ -44,40 +45,37 @@
         </section>
     </main>
 
-    <!-- 공통 다용도 모달 (사진 & 가격표 겸용) -->
     <div id="dynamic-modal" class="fixed inset-0 z-[60] hidden bg-black/80 flex items-center justify-center p-4">
         <div class="bg-white w-full max-w-3xl max-h-[85vh] rounded-3xl overflow-hidden flex flex-col shadow-2xl">
             <div class="p-6 border-b flex justify-between items-center bg-white sticky top-0 z-10">
-                <h3 id="modal-title" class="text-xl font-bold text-[#102C57]">안내</h3>
+                <h3 id="modal-title" class="text-xl font-bold text-[#102C57]">Information</h3>
                 <button onclick="closeModal()" class="text-slate-400 hover:text-black text-3xl leading-none">&times;</button>
             </div>
             <div id="modal-content" class="overflow-y-auto p-4 md:p-8 space-y-6 bg-slate-50">
-                <!-- JS에서 컨텐츠 삽입 -->
-            </div>
+                </div>
             <div class="p-6 border-t bg-white flex flex-col sm:flex-row gap-3">
-                <button onclick="closeModal()" class="flex-1 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition">닫기</button>
-                <a href="contact" class="flex-[2] py-3 bg-[#102C57] text-white text-center rounded-xl font-bold hover:bg-[#1a3e75] transition">이 차량 예약 문의하기</a>
+                <button onclick="closeModal()" class="flex-1 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition">Close</button>
+                <a href="contact" class="flex-[2] py-3 bg-[#102C57] text-white text-center rounded-xl font-bold hover:bg-[#1a3e75] transition">Inquire about this vehicle</a>
             </div>
         </div>
     </div>
 
-    <!-- Global Footer -->
     <footer class="bg-[#0A1A33] text-slate-400 py-12 mt-auto">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:flex justify-between items-center mb-8">
                 <div class="mb-6 md:mb-0 flex items-center gap-4">
-                    <img src="img/logo.jpg" alt="HOHO mobility" class="h-14 opacity-90 mix-blend-screen bg-white rounded p-1">
-                    <p class="text-sm text-slate-300 font-medium">외국인 호스트를 위한 든든한 이동 파트너</p>
+                    <img src="/img/logo.jpg" alt="HOHO mobility" class="h-14 opacity-90 mix-blend-screen bg-white rounded p-1">
+                    <p class="text-sm text-slate-300 font-medium">Your Reliable Mobility Partner for Foreign Guests</p>
                 </div>
                 <div class="flex flex-wrap gap-4 text-xs font-medium">
-                    <a href="terms" class="hover:text-white transition">이용약관</a> | 
-                    <a href="privacy" class="hover:text-white transition">개인정보처리방침</a> | 
-                    <a href="refund" class="text-[#60A5FA] hover:text-[#93C5FD] transition font-bold">환불 규정</a>
+                    <a href="/terms" class="hover:text-white transition">Terms of Service</a> | 
+                    <a href="privacy" class="hover:text-white transition">Privacy Policy</a> | 
+                    <a href="refund" class="text-[#60A5FA] hover:text-[#93C5FD] transition font-bold">Refund Policy</a>
                 </div>
             </div>
             <div class="text-[11px] md:text-xs text-slate-500 border-t border-slate-700 pt-8 space-y-2">
-                <p>상호명: 호호모빌리티 | 대표자: 서형주 | 사업장 소재지: 경기도 의정부시 용민로 36</p>
-                <p>고객센터: 010-6674-8253 | 이메일: hohomobility@naver.com</p>
+                <p>Company: HOHO Mobility | CEO: Seo Hyeong-ju | Address: 36, Yongmin-ro, Uijeongbu-si, Gyeonggi-do, Republic of Korea</p>
+                <p>Customer Center: +82-10-6674-8253 | Email: hohomobility@naver.com</p>
                 <p class="mt-4">&copy; 2026 HOHO mobility. All rights reserved.</p>
             </div>
         </div>
@@ -87,31 +85,29 @@
         let allData = [];
 
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('data/service.json').then(r => r.json()).then(data => {
+            // 영문 JSON 데이터를 절대 경로로 불러오기 (루트의 data 폴더)
+            fetch('/data/service_en.json').then(r => r.json()).then(data => {
                 allData = data;
                 const container = document.getElementById('service-product-list');
                 
                 container.innerHTML = data.map((item, index) => `
                     <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row transition hover:shadow-xl group">
                         
-                        <!-- 좌측: 큼직한 이미지 영역 (클릭 시 사진 띄우기) -->
                         <div class="md:w-1/2 h-72 md:h-auto min-h-[320px] overflow-hidden bg-slate-100 cursor-pointer relative" onclick="openModal(${index}, 'image')">
-                            <img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/800x600?text=Vehicle'">
+                            <img src="/${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/800x600?text=Vehicle'">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 flex items-center justify-center">
-                                <span class="bg-white/90 text-[#102C57] font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">상세 사진 보기 🔍</span>
+                                <span class="bg-white/90 text-[#102C57] font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">View Detailed Photos 🔍</span>
                             </div>
                         </div>
                         
-                        <!-- 우측: 텍스트 및 버튼 영역 -->
                         <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                             <p class="text-sm font-bold text-[#2E5C9E] mb-2">${item.sub_title}</p>
                             <h3 class="text-3xl font-black text-[#102C57] mb-6">${item.name}</h3>
                             <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8 flex-grow">${item.description}</p>
                             
                             <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                <!-- 사진 보기 버튼을 가격 안내 버튼으로 변경 -->
-                                <button onclick="openModal(${index}, 'price')" class="flex-1 bg-white border-2 border-[#102C57] text-[#102C57] font-bold py-3.5 rounded-xl hover:bg-slate-50 transition">요금표 안내</button>
-                                <a href="contact" class="flex-[1.5] bg-[#102C57] text-white text-center font-bold py-3.5 rounded-xl hover:bg-[#1a3e75] transition flex items-center justify-center">이 차량 상담 문의</a>
+                                <button onclick="openModal(${index}, 'price')" class="flex-1 bg-white border-2 border-[#102C57] text-[#102C57] font-bold py-3.5 rounded-xl hover:bg-slate-50 transition">View Pricing</button>
+                                <a href="contact" class="flex-[1.5] bg-[#102C57] text-white text-center font-bold py-3.5 rounded-xl hover:bg-[#1a3e75] transition flex items-center justify-center">Inquire & Book</a>
                             </div>
                         </div>
 
@@ -120,7 +116,7 @@
             });
         });
 
-// type 파라미터를 추가하여 사진(image)과 가격표(price)를 분기 처리
+        // type 파라미터를 추가하여 사진(image)과 가격표(price)를 분기 처리
         function openModal(index, type) {
             const item = allData[index];
             const modal = document.getElementById('dynamic-modal');
@@ -128,13 +124,13 @@
             const content = document.getElementById('modal-content');
 
             if (type === 'image') {
-                title.innerText = `${item.name} 상세 사진`;
+                title.innerText = `${item.name} Detailed Photos`;
                 content.innerHTML = item.images.map(path => `
-                    <img src="${path}" class="w-full rounded-2xl shadow-md border-4 border-white" onerror="this.style.display='none'">
+                    <img src="/${path}" class="w-full rounded-2xl shadow-md border-4 border-white" onerror="this.style.display='none'">
                 `).join('');
                 
             } else if (type === 'price') {
-                title.innerText = `${item.name} 구간별 단가표 (편도)`;
+                title.innerText = `${item.name} One-way Pricing by Region`;
                 
                 // 표에 들어갈 내용 생성
                 let tableRows = item.pricing.map(p => `
@@ -145,16 +141,15 @@
                 `).join('');
 
                 content.innerHTML = `
-                    <!-- 부가세 별도 안내 문구 추가 -->
                     <div class="flex justify-end mb-2">
-                        <span class="text-xs font-bold text-red-500 bg-red-50 px-2 py-1 rounded border border-red-100">※ 부가세(VAT) 별도</span>
+                        <span class="text-xs font-bold text-red-500 bg-red-50 px-2 py-1 rounded border border-red-100">※ VAT not included</span>
                     </div>
                     <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
                         <table class="w-full text-left border-collapse">
                             <thead class="bg-[#102C57] text-white">
                                 <tr>
-                                    <th class="py-3 px-4 text-sm font-bold w-2/3">도착지 (인천공항 출발 기준)</th>
-                                    <th class="py-3 px-4 text-sm font-bold w-1/3 text-right">요금</th>
+                                    <th class="py-3 px-4 text-sm font-bold w-2/3">Destination (From Incheon Airport)</th>
+                                    <th class="py-3 px-4 text-sm font-bold w-1/3 text-right">Fare</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -162,7 +157,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-xs text-slate-500 mt-4">* 위 요금은 톨게이트 및 주차비가 모두 포함된 최종 확정 금액입니다.</p>
+                    <p class="text-xs text-slate-500 mt-4">* The above prices are final and include all toll and parking fees.</p>
                 `;
             }
 

@@ -1,91 +1,78 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>페이지 이동 중 | 호호모빌리티</title>
+    <title>HOHO Mobility | Terms of Service</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
         body { font-family: 'Noto Sans KR', sans-serif; background-color: #F8FAFC; color: #0F172A; }
-        
-        /* 자동차 이모지 스타일 및 수정된 애니메이션 (화면 끝에서 끝으로) */
-        .car-emoji { 
-            font-size: 7rem; /* 자동차 크기 살짝 키움 */
-            display: inline-block; 
-            animation: moveCar 2.5s infinite linear; 
-        }
-        
-        /* -50vw(왼쪽 끝) 에서 50vw(오른쪽 끝) 으로 이동 */
-        @keyframes moveCar { 
-            0% { transform: translateX(-50vw); opacity: 0; } 
-            10% { opacity: 1; } 
-            90% { opacity: 1; } 
-            100% { transform: translateX(50vw); opacity: 0; } 
-        }
     </style>
-    <script type="text/javascript">
-        async function tryRedirect() {
-            let path = window.location.pathname;
-            
-            // 끝에 슬래시가 있다면 제거 (예: /en/service/ -> /en/service)
-            if (path.endsWith('/')) path = path.slice(0, -1);
-            
-            let segments = path.split('/');
-            
-            // 경로 조각을 뒤에서부터 하나씩 제거하며 확인
-            while (segments.length > 1) {
-                segments.pop(); // 마지막 세그먼트 제거
-                let parentPath = segments.join('/') || '/';
-                
-                try {
-                    // 해당 부모 경로가 존재하는지 살짝 확인 (HEAD 요청으로 데이터 절약)
-                    let response = await fetch(parentPath, { method: 'HEAD' });
-                    
-                    if (response.ok) {
-                        // 유효한 페이지를 찾으면 즉시 이동
-                        window.location.href = parentPath;
-                        return;
-                    }
-                } catch (e) {
-                    // 에러 발생 시 무시하고 다음 상위 경로 시도
-                }
-            }
-            
-            // 최후의 수단으로 메인 페이지로 이동 (2초 여유를 두어 애니메이션을 보여줌)
-            setTimeout(() => {
-                window.location.href = '/';
-            }, 1500);
-        }
-
-        tryRedirect();
-    </script>
 </head>
-<body class="flex flex-col min-h-screen overflow-hidden">
-    
+<body class="flex flex-col min-h-screen">
     <header class="bg-white/90 backdrop-blur-md border-b border-gray-200 fixed w-full top-0 z-50 shadow-sm text-nowrap">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
-            <a href="index" class="block"><img src="img/logo.jpg" alt="Logo" class="h-16 md:h-20 w-auto object-contain"></a>
-            <div class="flex items-center gap-4 md:gap-8">
-                <nav class="hidden md:flex space-x-6 lg:space-x-8">
-                    <a href="index" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Home</a>
-                    <a href="about" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">About Us</a>
-                    <a href="services" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Services</a>
-                    <a href="contact" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Contact</a>
-                </nav>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index" class="flex-shrink-0 block">
+                    <img src="/img/logo.jpg" alt="Logo" class="h-16 md:h-20 w-auto object-contain">
+                </a>
+                <div class="flex items-center gap-4 md:gap-8">
+                    <nav class="hidden md:flex space-x-6 lg:space-x-8">
+                        <a href="index" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Home</a>
+                        <a href="about" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">About Us</a>
+                        <a href="services" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Services</a>
+                        <a href="contact" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Contact</a>
+                    </nav>
+                    <div class="flex items-center text-[10px] md:text-xs font-bold gap-2.5 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
+                        <a href="/terms" class="text-slate-400 hover:text-[#102C57] flex items-center gap-1"><img src="https://flagcdn.com/w20/kr.png" width="16" alt="KO"> <span>KO</span></a>
+                        <span class="text-slate-300">|</span>
+                        <a href="terms" class="text-[#102C57] flex items-center gap-1"><img src="https://flagcdn.com/w20/us.png" width="16" alt="EN"> <span>EN</span></a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow flex flex-col justify-center items-center pt-24 text-center px-4 w-full">
-        
-        <div class="w-full flex justify-center mb-8">
-            <span class="car-emoji">🚙</span> </div>
-
-        <h2 class="text-2xl md:text-3xl font-bold text-[#102C57] mb-3">가장 적절한 페이지로 연결 중입니다.</h2>
-        <p class="text-slate-500 text-lg">Connecting you to the best page. Please wait a moment.</p>
-        
+    <main class="flex-grow pt-32 pb-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-[#102C57] mb-8 border-b pb-4 tracking-tighter">Terms of Service</h2>
+            <div class="prose max-w-none text-slate-600 text-sm space-y-6 bg-white p-8 rounded-2xl shadow-sm border leading-relaxed">
+                <div>
+                    <p><strong>Article 1 (Purpose)</strong><br>The purpose of these Terms of Service is to stipulate the conditions and procedures of use, rights, obligations, and responsibilities for the services provided by HOHO Mobility (hereinafter referred to as the "Company").</p>
+                    <p><strong>Article 2 (Effect and Modification of Terms)</strong><br>1. These terms are effective for all customers who wish to use the service.<br>2. The Company may modify these terms when deemed necessary, and the modified terms will take effect upon being posted on the website.</p>
+                    <p><strong>Article 3 (Provision and Modification of Service)</strong><br>The Company may temporarily suspend services due to operational or technical issues and reserves the right to modify the content of the services.</p>
+                    <p><strong>Article 4 (Formation of Contract)</strong><br>The service contract is established when the customer completes the payment based on the quote and scope of work provided by the Company after a service request and consultation.</p>
+                </div>
+                <div class="pt-6 border-t border-slate-100">
+                    <p class="font-bold text-[#102C57] mb-2">Article 5 (Exemption Clause)</p>
+                    <p>1. The Company shall be exempt from liability if it cannot provide services due to force majeure events such as natural disasters, severe weather conditions, strikes, or control by relevant authorities.</p>
+                    <p>2. The Company shall not be liable for damages resulting from delayed airport arrivals or missed flights caused by unforeseen severe traffic congestion (e.g., holidays, rush hours, accidents), provided there is no intentional misconduct or gross negligence on the part of the Company.</p>
+                </div>
+                <p class="mt-8 text-xs text-slate-400">These Terms of Service shall be effective from January 1, 2026.</p>
+            </div>
+        </div>
     </main>
 
+    <footer class="bg-[#0A1A33] text-slate-400 py-12 mt-auto">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0 flex items-center gap-4">
+                    <img src="/img/logo.jpg" alt="HOHO mobility" class="h-14 opacity-90 mix-blend-screen bg-white rounded p-1">
+                    <p class="text-sm text-slate-300 font-medium">Your Reliable Mobility Partner for Foreign Guests</p>
+                </div>
+                <div class="flex flex-wrap gap-4 text-xs font-medium">
+                    <a href="terms" class="hover:text-white transition">Terms of Service</a> | 
+                    <a href="privacy" class="hover:text-white transition">Privacy Policy</a> | 
+                    <a href="refund" class="text-[#60A5FA] hover:text-[#93C5FD] transition font-bold">Refund Policy</a>
+                </div>
+            </div>
+            <div class="text-[11px] md:text-xs text-slate-500 border-t border-slate-700 pt-8 space-y-2">
+                <p>Company: HOHO Mobility | CEO: Seo Hyeong-ju | Address: 36, Yongmin-ro, Uijeongbu-si, Gyeonggi-do, Republic of Korea</p>
+                <p>Customer Center: +82-10-6674-8253 | Email: hohomobility@naver.com</p>
+                <p class="mt-4">&copy; 2026 HOHO mobility. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
