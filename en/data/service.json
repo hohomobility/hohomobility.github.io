@@ -4,15 +4,15 @@
     "name": "Hyundai Staria",
     "sub_title": "Recommended for small families (1~6 pax)",
     "description": "A premium van focused on ride comfort, perfect for small families or guests with light luggage. We promise a comfortable journey from the airport to your accommodation.",
-    "image": "/img/services/staria/staria.jpg",
+    "image": "img/services/staria/staria.jpg",
     "images": [
-      "/img/services/staria/staria.jpg",
-      "/img/services/staria/0.jpg",
-      "/img/services/staria/1.jpg",
-      "/img/services/staria/2.jpg",
-      "/img/services/staria/3.jpg",
-      "/img/services/staria/4.jpg",
-      "/img/services/staria/5.jpg"
+      "img/services/staria/staria.jpg",
+      "img/services/staria/0.jpg",
+      "img/services/staria/1.jpg",
+      "img/services/staria/2.jpg",
+      "img/services/staria/3.jpg",
+      "img/services/staria/4.jpg",
+      "img/services/staria/5.jpg"
     ],
     "pricing": [
       {"region": "Songdo", "price": "70,000 KRW"},
@@ -33,11 +33,11 @@
     "name": "Hyundai Solati",
     "sub_title": "Large groups of 1~13 pax",
     "description": "Boasts a spacious interior and ample luggage capacity. A large vehicle optimized for long-term guests with many bags, large families, and group tours.",
-    "image": "/img/services/solati/solati.jpg",
+    "image": "img/services/solati/solati.jpg",
     "images": [
-      "/img/services/solati/solati.jpg",
-      "/img/services/solati/0.jpg",
-      "/img/services/solati/1.jpg"
+      "img/services/solati/solati.jpg",
+      "img/services/solati/0.jpg",
+      "img/services/solati/1.jpg"
     ],
     "pricing": [
       {"region": "Songdo", "price": "170,000 KRW"},
@@ -58,11 +58,11 @@
     "name": "Mercedes-Benz Sprinter (Business)",
     "sub_title": "VIP Protocol & Large groups of 1~13 pax",
     "description": "The essence of top-tier luxury mobility. Provides overwhelming spaciousness and utmost comfort for VIP guest protocols or premium sightseeing.",
-    "image": "/img/services/sprinter_b/sprinter_b.jpg",
+    "image": "img/services/sprinter_b/sprinter_b.jpg",
     "images": [
-      "/img/services/sprinter_b/sprinter_b.jpg",
-      "/img/services/sprinter_b/0.jpg",
-      "/img/services/sprinter_b/1.png"
+      "img/services/sprinter_b/sprinter_b.jpg",
+      "img/services/sprinter_b/0.jpg",
+      "img/services/sprinter_b/1.png"
     ],
     "pricing": [
       {"region": "Songdo", "price": "250,000 KRW"},
@@ -83,11 +83,11 @@
     "name": "Mercedes-Benz Sprinter (Limousine)",
     "sub_title": "VIP Protocol & Groups of 1~8 pax",
     "description": "Brings the comfort of an airplane's first class to the ground. Experience the best limousine service for special guests.",
-    "image": "/img/services/sprinter_l/sprinter_l.jpg",
+    "image": "img/services/sprinter_l/sprinter_l.jpg",
     "images": [
-      "/img/services/sprinter_l/sprinter_l.jpg",
-      "/img/services/sprinter_l/0.jpg",
-      "/img/services/sprinter_l/1.png"
+      "img/services/sprinter_l/sprinter_l.jpg",
+      "img/services/sprinter_l/0.jpg",
+      "img/services/sprinter_l/1.png"
     ],
     "pricing": [
       {"region": "Upon Request", "price": ""}
