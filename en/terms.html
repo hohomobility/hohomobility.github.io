@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페이지 이동 중 | 호호모빌리티</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #F8FAFC; color: #0F172A; }
+        
+        /* 자동차 이모지 스타일 및 수정된 애니메이션 (화면 끝에서 끝으로) */
+        .car-emoji { 
+            font-size: 7rem; /* 자동차 크기 살짝 키움 */
+            display: inline-block; 
+            animation: moveCar 2.5s infinite linear; 
+        }
+        
+        /* -50vw(왼쪽 끝) 에서 50vw(오른쪽 끝) 으로 이동 */
+        @keyframes moveCar { 
+            0% { transform: translateX(-50vw); opacity: 0; } 
+            10% { opacity: 1; } 
+            90% { opacity: 1; } 
+            100% { transform: translateX(50vw); opacity: 0; } 
+        }
+    </style>
+    <script type="text/javascript">
+        async function tryRedirect() {
+            let path = window.location.pathname;
+            
+            // 끝에 슬래시가 있다면 제거 (예: /en/service/ -> /en/service)
+            if (path.endsWith('/')) path = path.slice(0, -1);
+            
+            let segments = path.split('/');
+            
+            // 경로 조각을 뒤에서부터 하나씩 제거하며 확인
+            while (segments.length > 1) {
+                segments.pop(); // 마지막 세그먼트 제거
+                let parentPath = segments.join('/') || '/';
+                
+                try {
+                    // 해당 부모 경로가 존재하는지 살짝 확인 (HEAD 요청으로 데이터 절약)
+                    let response = await fetch(parentPath, { method: 'HEAD' });
+                    
+                    if (response.ok) {
+                        // 유효한 페이지를 찾으면 즉시 이동
+                        window.location.href = parentPath;
+                        return;
+                    }
+                } catch (e) {
+                    // 에러 발생 시 무시하고 다음 상위 경로 시도
+                }
+            }
+            
+            // 최후의 수단으로 메인 페이지로 이동 (2초 여유를 두어 애니메이션을 보여줌)
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 1500);
+        }
+
+        tryRedirect();
+    </script>
+</head>
+<body class="flex flex-col min-h-screen overflow-hidden">
+    
+    <header class="bg-white/90 backdrop-blur-md border-b border-gray-200 fixed w-full top-0 z-50 shadow-sm text-nowrap">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
+            <a href="index" class="block"><img src="img/logo.jpg" alt="Logo" class="h-16 md:h-20 w-auto object-contain"></a>
+            <div class="flex items-center gap-4 md:gap-8">
+                <nav class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="index" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Home</a>
+                    <a href="about" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">About Us</a>
+                    <a href="services" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Services</a>
+                    <a href="contact" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow flex flex-col justify-center items-center pt-24 text-center px-4 w-full">
+        
+        <div class="w-full flex justify-center mb-8">
+            <span class="car-emoji">🚙</span> </div>
+
+        <h2 class="text-2xl md:text-3xl font-bold text-[#102C57] mb-3">가장 적절한 페이지로 연결 중입니다.</h2>
+        <p class="text-slate-500 text-lg">Connecting you to the best page. Please wait a moment.</p>
+        
+    </main>
+
+</body>
+</html>
