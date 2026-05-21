@@ -79,18 +79,16 @@
                     </a>
                     
                     <!-- 수정된 위챗 QR 코드 영역 -->
-                    <div class="w-full border-2 border-[#07C160]/30 bg-white pt-5 pb-4 rounded-2xl shadow-sm flex flex-col items-center gap-3 transition hover:border-[#07C160]">
+                    <div class="w-full border-2 border-[#07C160]/30 bg-white py-5 rounded-2xl shadow-sm flex flex-col items-center gap-3 transition hover:border-[#07C160]">
                         <span class="font-bold text-[#07C160] flex items-center gap-2">
                             <span class="text-xl">💬</span> WeChat (위챗)
                         </span>
                         
-                        <!-- download 속성을 추가하여 클릭 시 이미지가 저장되도록 설정 -->
-                        <a href="/img/contact.png" download="wechat_qr.png" class="group relative block p-2 bg-slate-50 rounded-xl border border-slate-100 cursor-pointer" title="클릭하여 QR코드 저장">
-                            <img src="/img/contact.png" alt="WeChat QR Code" class="w-32 h-32 md:w-36 md:h-36 object-contain group-hover:opacity-30 transition duration-300">
-                            <!-- 마우스 오버 시 나타나는 다운로드 안내 효과 -->
+                        <a href="/img/contact.png" download="wechat_qr.png" class="group relative block w-full px-6 cursor-pointer" title="클릭하여 QR코드 저장">
+                            <img src="/img/contact.png" alt="WeChat QR Code" class="w-full h-auto object-contain bg-slate-50 p-2 rounded-xl border border-slate-100 group-hover:opacity-30 transition duration-300">
                             <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                                <span class="text-2xl mb-1">⬇️</span>
-                                <span class="text-xs font-bold text-white bg-[#07C160] px-3 py-1.5 rounded-full shadow-md">이미지 저장</span>
+                                <span class="text-3xl mb-1">⬇️</span>
+                                <span class="text-sm font-bold text-white bg-[#07C160] px-4 py-1.5 rounded-full shadow-md">이미지 저장</span>
                             </div>
                         </a>
                         
