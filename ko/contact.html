@@ -11,7 +11,7 @@
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
-    <!-- Header: index과 동일 -->
+    <!-- Header -->
     <header class="bg-white/90 backdrop-blur-md border-b border-gray-200 fixed w-full top-0 z-50 shadow-sm text-nowrap">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
@@ -40,7 +40,7 @@
             <a href="index" class="block py-2 text-[#102C57] font-bold">Home</a>
             <a href="about" class="block py-2 text-slate-600">About Us</a>
             <a href="services" class="block py-2 text-slate-600">Services</a>
-            <a href="contact" class="block py-2 text-slate-600">Contact</a>
+            <a href="contact" class="block py-2 text-[#102C57] font-bold">Contact</a>
         </div>
     </header>
 
@@ -63,7 +63,7 @@
                     </p>
                 </div>
 
-                <!-- SNS 버튼 리스트 (한 줄에 하나씩 동일한 크기) -->
+                <!-- SNS 버튼 리스트 -->
                 <div class="flex flex-col gap-4 max-w-sm mx-auto">
                     <a href="http://pf.kakao.com/_ExfgqX/chat" target="_blank" class="w-full bg-[#FEE500] text-[#391B1B] py-4 rounded-2xl font-bold shadow-sm hover:brightness-95 transition flex justify-center items-center gap-3">
                         <span class="text-xl">💬</span> 카카오톡 실시간 상담
@@ -77,15 +77,33 @@
                     <a href="https://line.me/ti/p/6pSC2JsShm" target="_blank" class="w-full bg-[#00C300] text-white py-4 rounded-2xl font-bold shadow-sm hover:brightness-95 transition flex justify-center items-center gap-3">
                         <span class="text-xl">💬</span> LINE (라인) 상담
                     </a>
-                    <a href="https://u.wechat.com/kFN3O8RUc9hjzArOHXpbI3Q?s=3" target="_blank" class="w-full bg-[#07C160] text-white py-4 rounded-2xl font-bold shadow-sm hover:brightness-95 transition flex justify-center items-center gap-3">
-                        <span class="text-xl">💬</span> WeChat (위챗)
-                    </a>
+                    
+                    <!-- 수정된 위챗 QR 코드 영역 -->
+                    <div class="w-full border-2 border-[#07C160]/30 bg-white pt-5 pb-4 rounded-2xl shadow-sm flex flex-col items-center gap-3 transition hover:border-[#07C160]">
+                        <span class="font-bold text-[#07C160] flex items-center gap-2">
+                            <span class="text-xl">💬</span> WeChat (위챗)
+                        </span>
+                        
+                        <!-- download 속성을 추가하여 클릭 시 이미지가 저장되도록 설정 -->
+                        <a href="/img/contact.png" download="wechat_qr.png" class="group relative block p-2 bg-slate-50 rounded-xl border border-slate-100 cursor-pointer" title="클릭하여 QR코드 저장">
+                            <img src="/img/contact.png" alt="WeChat QR Code" class="w-32 h-32 md:w-36 md:h-36 object-contain group-hover:opacity-30 transition duration-300">
+                            <!-- 마우스 오버 시 나타나는 다운로드 안내 효과 -->
+                            <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                                <span class="text-2xl mb-1">⬇️</span>
+                                <span class="text-xs font-bold text-white bg-[#07C160] px-3 py-1.5 rounded-full shadow-md">이미지 저장</span>
+                            </div>
+                        </a>
+                        
+                        <p class="text-[11px] text-slate-400 font-medium">QR코드를 스캔하거나 클릭해서 저장하세요</p>
+                    </div>
+                    <!-- // 수정된 위챗 QR 코드 영역 끝 -->
+
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer: index과 동일 -->
+    <!-- Footer -->
     <footer class="bg-[#0A1A33] text-slate-400 py-12 mt-auto">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:flex justify-between items-center mb-8">
