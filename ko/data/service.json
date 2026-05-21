@@ -4,28 +4,19 @@
     "name": "현대 스타리아",
     "sub_title": "1~6명 소규모 가족 추천",
     "description": "승차감 위주의 프리미엄 밴으로, 소규모 가족이나 짐이 적은 게스트에게 안성맞춤입니다. 공항에서 숙소까지 편안한 이동을 약속합니다.",
-    "image": "img/services/staria/staria.jpg",
+    "image": "/img/services/staria/staria.jpg",
     "images": [
-      "img/services/staria/staria.jpg",
-      "img/services/staria/0.jpg",
-      "img/services/staria/1.jpg",
-      "img/services/staria/2.jpg",
-      "img/services/staria/3.jpg",
-      "img/services/staria/4.jpg",
-      "img/services/staria/5.jpg"
+      "/img/services/staria/staria.jpg",
+      "/img/services/staria/0.jpg",
+      "/img/services/staria/1.jpg",
+      "/img/services/staria/2.jpg",
+      "/img/services/staria/3.jpg",
+      "/img/services/staria/4.jpg",
+      "/img/services/staria/5.jpg"
     ],
     "pricing": [
-      {"region": "송도", "price": "70,000원"},
-      {"region": "고양, 일산", "price": "95,000원"},
-      {"region": "마포, 홍대, 강서, 은평, 부천, 광명, 안산, 시흥", "price": "95,000원"},
-      {"region": "서대문, 용산, 종로, 중구, 김포", "price": "95,000원"},
-      {"region": "노원, 도봉, 강남, 서초, 송파, 강동, 안양, 군포, 의왕, 과천, 파주", "price": "100,000원"},
-      {"region": "의정부", "price": "110,000원"},
-      {"region": "구리, 남양주(다산), 별내, 용인(수지/기흥), 수원, 성남, 하남(미사)", "price": "110,000원"},
-      {"region": "남양주(진접/오남/화도), 양주, 화성(동탄)", "price": "120,000원"},
-      {"region": "동두천, 오산, 경기광주", "price": "130,000원"},
-      {"region": "용인 처인구(에버랜드), 안성", "price": "140,000원"},
-      {"region": "평택, 이천, 여주, 가평, 남이섬, 양평", "price": "160,000원"}
+      {"region": "인천 공항 ↔ 서울", "price": "110,000원"},
+      {"region": "인천 공항 ↔ 경기도", "price": "100,000원 부터"}
     ]
   },
   {
@@ -33,24 +24,15 @@
     "name": "현대 쏠라티",
     "sub_title": "다인원 1~13명",
     "description": "넓은 실내 공간과 넉넉한 적재 공간을 자랑합니다. 캐리어 등 짐이 많은 장기 투숙객이나 대가족, 단체 투어에 최적화된 대형 차량입니다.",
-    "image": "img/services/solati/solati.jpg",
+    "image": "/img/services/solati/solati.jpg",
     "images": [
-      "img/services/solati/solati.jpg",
-      "img/services/solati/0.jpg",
-      "img/services/solati/1.jpg"
+      "/img/services/solati/solati.jpg",
+      "/img/services/solati/0.jpg",
+      "/img/services/solati/1.jpg"
     ],
     "pricing": [
-      {"region": "송도", "price": "170,000원"},
-      {"region": "고양, 일산", "price": "195,000원"},
-      {"region": "마포, 홍대, 강서, 은평, 부천, 광명, 안산, 시흥", "price": "195,000원"},
-      {"region": "서대문, 용산, 종로, 중구, 김포", "price": "195,000원"},
-      {"region": "노원, 도봉, 강남, 서초, 송파, 강동, 안양, 군포, 의왕, 과천, 파주", "price": "200,000원"},
-      {"region": "의정부", "price": "210,000원"},
-      {"region": "구리, 남양주(다산), 별내, 용인(수지/기흥), 수원, 성남, 하남(미사)", "price": "210,000원"},
-      {"region": "남양주(진접/오남/화도), 양주, 화성(동탄)", "price": "220,000원"},
-      {"region": "동두천, 오산, 경기광주", "price": "230,000원"},
-      {"region": "용인 처인구(에버랜드), 안성", "price": "240,000원"},
-      {"region": "평택, 이천, 여주, 가평, 남이섬, 양평", "price": "260,000원"}
+      {"region": "인천 공항 ↔ 서울", "price": "210,000원"},
+      {"region": "인천 공항 ↔ 경기도", "price": "210,000원 부터"}
     ]
   },
   {
@@ -58,24 +40,15 @@
     "name": "메르세데스-벤츠 스프린터 (비즈니스)",
     "sub_title": "Vip의전 및 다인원 1~13명",
     "description": "최고급 럭셔리 모빌리티의 정수. VIP 게스트 의전이나 프리미엄 관광을 위해 압도적인 공간감과 최상의 편안함을 제공합니다.",
-    "image": "img/services/sprinter_b/sprinter_b.jpg",
+    "image": "/img/services/sprinter_b/sprinter_b.jpg",
     "images": [
-      "img/services/sprinter_b/sprinter_b.jpg",
-      "img/services/sprinter_b/0.jpg",
-      "img/services/sprinter_b/1.png"
+      "/img/services/sprinter_b/sprinter_b.jpg",
+      "/img/services/sprinter_b/0.jpg",
+      "/img/services/sprinter_b/1.png"
     ],
     "pricing": [
-      {"region": "송도", "price": "250,000원"},
-      {"region": "고양, 일산", "price": "275,000원"},
-      {"region": "마포, 홍대, 강서, 은평, 부천, 광명, 안산, 시흥", "price": "275,000원"},
-      {"region": "서대문, 용산, 종로, 중구, 김포", "price": "275,000원"},
-      {"region": "노원, 도봉, 강남, 서초, 송파, 강동, 안양, 군포, 의왕, 과천, 파주", "price": "280,000원"},
-      {"region": "의정부", "price": "290,000원"},
-      {"region": "구리, 남양주(다산), 별내, 용인(수지/기흥), 수원, 성남, 하남(미사)", "price": "290,000원"},
-      {"region": "남양주(진접/오남/화도), 양주, 화성(동탄)", "price": "300,000원"},
-      {"region": "동두천, 오산, 경기광주", "price": "310,000원"},
-      {"region": "용인 처인구(에버랜드), 안성", "price": "320,000원"},
-      {"region": "평택, 이천, 여주, 가평, 남이섬, 양평", "price": "340,000원"}
+      {"region": "인천 공항 ↔ 서울", "price": "260,000원"},
+      {"region": "인천 공항 ↔ 경기도", "price": "260,000원 부터"}
    ]
   },
   {
@@ -83,14 +56,15 @@
     "name": "메르세데스-벤츠 스프린터 (리무진)",
     "sub_title": "Vip의전 및 다인원 1~8명",
     "description": "항공기 1등석의 편안함을 지상에서 구현했습니다. 특별한 게스트를 위한 최고의 리무진 서비스를 경험해보세요.",
-    "image": "img/services/sprinter_l/sprinter_l.jpg",
+    "image": "/img/services/sprinter_l/sprinter_l.jpg",
     "images": [
-      "img/services/sprinter_l/sprinter_l.jpg",
-      "img/services/sprinter_l/0.jpg",
-      "img/services/sprinter_l/1.png"
+      "/img/services/sprinter_l/sprinter_l.jpg",
+      "/img/services/sprinter_l/0.jpg",
+      "/img/services/sprinter_l/1.png"
     ],
     "pricing": [
-      {"region": "문의 요망", "price": ""}
+      {"region": "인천 공항 ↔ 서울", "price": "330,000원"},
+      {"region": "인천 공항 ↔ 경기도", "price": "330,000원 부터"}
     ]
   }
 ]

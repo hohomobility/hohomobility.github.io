@@ -3,7 +3,7 @@
     "id": "staria",
     "name": "Hyundai Staria",
     "sub_title": "Recommended for small families (1~6 pax)",
-    "description": "A premium van focused on ride comfort, perfect for small families or guests with light luggage. We promise a comfortable journey from the airport to your accommodation.",
+    "description": "A premium van focused on ride comfort, perfect for small families or guests with light luggage. We promise a comfortable journey From the airport to your accommodation.",
     "image": "img/services/staria/staria.jpg",
     "images": [
       "img/services/staria/staria.jpg",
@@ -15,17 +15,8 @@
       "img/services/staria/5.jpg"
     ],
     "pricing": [
-      {"region": "Songdo", "price": "70,000 KRW"},
-      {"region": "Goyang, Ilsan", "price": "95,000 KRW"},
-      {"region": "Mapo, Hongdae, Gangseo, Eunpyeong, Bucheon, Gwangmyeong, Ansan, Siheung", "price": "95,000 KRW"},
-      {"region": "Seodaemun, Yongsan, Jongno, Jung-gu, Gimpo", "price": "95,000 KRW"},
-      {"region": "Nowon, Dobong, Gangnam, Seocho, Songpa, Gangdong, Anyang, Gunpo, Uiwang, Gwacheon, Paju", "price": "100,000 KRW"},
-      {"region": "Uijeongbu", "price": "110,000 KRW"},
-      {"region": "Guri, Namyangju (Dasan), Byeollae, Yongin (Suji/Giheung), Suwon, Seongnam, Hanam (Misa)", "price": "110,000 KRW"},
-      {"region": "Namyangju (Jinjeop/Onam/Hwado), Yangju, Hwaseong (Dongtan)", "price": "120,000 KRW"},
-      {"region": "Dongducheon, Osan, Gwangju (Gyeonggi)", "price": "130,000 KRW"},
-      {"region": "Yongin Cheoin-gu (Everland), Anseong", "price": "140,000 KRW"},
-      {"region": "Pyeongtaek, Icheon, Yeoju, Gapyeong, Nami Island, Yangpyeong", "price": "160,000 KRW"}
+      {"region": "Incheon Airport ↔ Seoul", "price": "110,000 KRW"},
+      {"region": "Incheon Airport ↔ Gyeonggi-do", "price": "From 100,000 KRW"}
     ]
   },
   {
@@ -40,17 +31,8 @@
       "img/services/solati/1.jpg"
     ],
     "pricing": [
-      {"region": "Songdo", "price": "170,000 KRW"},
-      {"region": "Goyang, Ilsan", "price": "195,000 KRW"},
-      {"region": "Mapo, Hongdae, Gangseo, Eunpyeong, Bucheon, Gwangmyeong, Ansan, Siheung", "price": "195,000 KRW"},
-      {"region": "Seodaemun, Yongsan, Jongno, Jung-gu, Gimpo", "price": "195,000 KRW"},
-      {"region": "Nowon, Dobong, Gangnam, Seocho, Songpa, Gangdong, Anyang, Gunpo, Uiwang, Gwacheon, Paju", "price": "200,000 KRW"},
-      {"region": "Uijeongbu", "price": "210,000 KRW"},
-      {"region": "Guri, Namyangju (Dasan), Byeollae, Yongin (Suji/Giheung), Suwon, Seongnam, Hanam (Misa)", "price": "210,000 KRW"},
-      {"region": "Namyangju (Jinjeop/Onam/Hwado), Yangju, Hwaseong (Dongtan)", "price": "220,000 KRW"},
-      {"region": "Dongducheon, Osan, Gwangju (Gyeonggi)", "price": "230,000 KRW"},
-      {"region": "Yongin Cheoin-gu (Everland), Anseong", "price": "240,000 KRW"},
-      {"region": "Pyeongtaek, Icheon, Yeoju, Gapyeong, Nami Island, Yangpyeong", "price": "260,000 KRW"}
+      {"region": "Incheon Airport ↔ Seoul", "price": "210,000 KRW"},
+      {"region": "Incheon Airport ↔ Gyeonggi-do", "price": "From 210,000 KRW"}
     ]
   },
   {
@@ -65,17 +47,8 @@
       "img/services/sprinter_b/1.png"
     ],
     "pricing": [
-      {"region": "Songdo", "price": "250,000 KRW"},
-      {"region": "Goyang, Ilsan", "price": "275,000 KRW"},
-      {"region": "Mapo, Hongdae, Gangseo, Eunpyeong, Bucheon, Gwangmyeong, Ansan, Siheung", "price": "275,000 KRW"},
-      {"region": "Seodaemun, Yongsan, Jongno, Jung-gu, Gimpo", "price": "275,000 KRW"},
-      {"region": "Nowon, Dobong, Gangnam, Seocho, Songpa, Gangdong, Anyang, Gunpo, Uiwang, Gwacheon, Paju", "price": "280,000 KRW"},
-      {"region": "Uijeongbu", "price": "290,000 KRW"},
-      {"region": "Guri, Namyangju (Dasan), Byeollae, Yongin (Suji/Giheung), Suwon, Seongnam, Hanam (Misa)", "price": "290,000 KRW"},
-      {"region": "Namyangju (Jinjeop/Onam/Hwado), Yangju, Hwaseong (Dongtan)", "price": "300,000 KRW"},
-      {"region": "Dongducheon, Osan, Gwangju (Gyeonggi)", "price": "310,000 KRW"},
-      {"region": "Yongin Cheoin-gu (Everland), Anseong", "price": "320,000 KRW"},
-      {"region": "Pyeongtaek, Icheon, Yeoju, Gapyeong, Nami Island, Yangpyeong", "price": "340,000 KRW"}
+      {"region": "Incheon Airport ↔ Seoul", "price": "260,000 KRW"},
+      {"region": "Incheon Airport ↔ Gyeonggi-do", "price": "From 260,000 KRW"}
     ]
   },
   {
@@ -90,7 +63,8 @@
       "img/services/sprinter_l/1.png"
     ],
     "pricing": [
-      {"region": "Upon Request", "price": ""}
+      {"region": "Incheon Airport ↔ Seoul", "price": "330,000 KRW"},
+      {"region": "Incheon Airport ↔ Gyeonggi-do", "price": "From 330,000 KRW"}
     ]
   }
 ]
