@@ -8,7 +8,7 @@
         async function tryRedirect() {
             let path = window.location.pathname;
             
-            // 끝에 슬래시가 있다면 제거 (예: /en/service/ -> /en/service)
+            // 끝에 슬래시가 있다면 제거 (예: //service/ -> //service)
             if (path.endsWith('/')) path = path.slice(0, -1);
             
             let segments = path.split('/');
@@ -51,8 +51,7 @@
 </head>
 <body>
     <span class="car-emoji">🚗</span><br>
-
-    <p>가장 적절한 페이지로 연결 중입니다. 잠시만 기다려 주세요.</p>
     <p>Connecting you to the best page. Please wait a moment.</p>
+    <p>가장 적절한 페이지로 연결 중입니다. 잠시만 기다려 주세요.</p>
 </body>
 </html>
