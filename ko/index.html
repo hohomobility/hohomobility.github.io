@@ -26,7 +26,6 @@
                         <a href="contact" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Contact</a>
                     </nav>
 
-                    <!-- Language Switcher -->
                     <div class="flex items-center text-[10px] md:text-xs font-bold gap-2.5 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
                         <a href="/index" class="flex items-center gap-1 text-slate-400 hover:text-[#102C57]">
                             <img src="https://flagcdn.com/w20/us.png" width="16" alt="EN"> <span class="hidden sm:inline">EN</span>
@@ -52,7 +51,6 @@
     </header>
 
     <main class="flex-grow pt-24">
-        <!-- 메인 히어로 섹션 (이미지 잘림 해결) -->
         <section class="w-full">
             <div class="w-full">
                 <a href="contact">
@@ -81,10 +79,26 @@
                 </div>
             </div>
         </section>
+
+        <section class="bg-white py-20 border-t border-slate-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 order-1 md:order-1">
+                        <img src="/img/home/picket.jpg" alt="Airport Meet and Greet Pickup Sign" class="w-full h-auto rounded-3xl shadow-lg object-cover">
+                    </div>
+                    <div class="md:w-1/2 order-2 md:order-2 text-center md:text-left">
+                        <div class="inline-block bg-[#EFF6FF] text-[#2E5C9E] font-bold px-4 py-2 rounded-full mb-4 text-sm">안심 케어 솔루션</div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-[#102C57] mb-6 leading-tight">입국장에서 만나는<br>가장 든든한 환영</h2>
+                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                            한국을 처음 방문하는 외국인 게스트도 길을 잃을 걱정이 없습니다.<br>
+                            게스트의 영문 이름이 적힌 전용 피켓을 들고, <strong>입국장 게이트 바로 앞에서 베테랑 기사님이 직접 맞이합니다.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <!-- 통합된 강점 요약 섹션 (3개 -> 2개) -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-            <!-- max-w-4xl을 주어 카드가 너무 좌우로 뚱뚱해지지 않게 밸런스 조절 -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-20">
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 text-center transition hover:shadow-md">
                     <div class="text-5xl mb-4">✨</div>
@@ -105,24 +119,6 @@
             </div>
         </section>
 
-        <!-- 피켓 서비스 상세 섹션 -->
-        <section class="bg-white py-20 border-t border-slate-100">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2 order-2 md:order-1">
-                        <img src="/img/home/picket.jpg" alt="Airport Meet and Greet Pickup Sign" class="w-full h-auto rounded-3xl shadow-lg object-cover">
-                    </div>
-                    <div class="md:w-1/2 order-1 md:order-2 text-center md:text-left">
-                        <div class="inline-block bg-[#EFF6FF] text-[#2E5C9E] font-bold px-4 py-2 rounded-full mb-4 text-sm">안심 케어 솔루션</div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-[#102C57] mb-6 leading-tight">입국장에서 만나는<br>가장 든든한 환영</h2>
-                        <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                            한국을 처음 방문하는 외국인 게스트도 길을 잃을 걱정이 없습니다.<br>
-                            게스트의 영문 이름이 적힌 전용 피켓을 들고, <strong>입국장 게이트 바로 앞에서 베테랑 기사님이 직접 맞이합니다.</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="bg-[#0A1A33] text-slate-400 py-12 mt-auto">
