@@ -29,8 +29,15 @@
                         <span class="text-slate-300">|</span>
                         <a href="/ko/contact" class="text-slate-400 hover:text-[#102C57] flex items-center gap-1"><img src="https://flagcdn.com/w20/kr.png" width="16" alt="KO"> <span>KO</span></a>
                     </div>
+                    <div class="md:hidden"><button id="mobile-menu-btn" class="text-slate-600 text-2xl px-2">&#9776;</button></div>
                 </div>
             </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col space-y-2 shadow-lg">
+            <a href="index" class="block py-2 text-slate-600">Home</a>
+            <a href="about" class="block py-2 text-[#102C57] font-bold">About Us</a>
+            <a href="services" class="block py-2 text-slate-600">Services</a>
+            <a href="contact" class="block py-2 text-slate-600">Contact</a>
         </div>
     </header>
 
@@ -92,5 +99,10 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
