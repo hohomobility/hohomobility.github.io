@@ -15,8 +15,7 @@
       "img/services/staria/5.jpg"
     ],
     "pricing": [
-      {"region": "Incheon Airport ↔ Seoul", "price": "110,000 KRW"},
-      {"region": "Incheon Airport ↔ Gyeonggi-do", "price": "From 100,000 KRW"}
+      {"region": "Incheon Airport ↔ Gyeonggi-do, Seoul", "price": "100,000 KRW"}
     ]
   },
   {
@@ -31,8 +30,7 @@
       "img/services/solati/1.jpg"
     ],
     "pricing": [
-      {"region": "Incheon Airport ↔ Seoul", "price": "210,000 KRW"},
-      {"region": "Incheon Airport ↔ Gyeonggi-do", "price": "From 210,000 KRW"}
+      {"region": "Incheon Airport ↔ Gyeonggi-do, Seoul", "price": "220,000 KRW"},
     ]
   },
   {
@@ -47,8 +45,7 @@
       "img/services/sprinter_b/1.png"
     ],
     "pricing": [
-      {"region": "Incheon Airport ↔ Seoul", "price": "260,000 KRW"},
-      {"region": "Incheon Airport ↔ Gyeonggi-do", "price": "From 260,000 KRW"}
+      {"region": "Incheon Airport ↔ Gyeonggi-do, Seoul", "price": "330,000 KRW"}
     ]
   },
   {
@@ -63,8 +60,7 @@
       "img/services/sprinter_l/1.png"
     ],
     "pricing": [
-      {"region": "Incheon Airport ↔ Seoul", "price": "330,000 KRW"},
-      {"region": "Incheon Airport ↔ Gyeonggi-do", "price": "From 330,000 KRW"}
+      {"region": "Incheon Airport ↔ Gyeonggi-do, Seoul", "price": "400,000 KRW"}
     ]
   }
 ]
