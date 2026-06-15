@@ -15,7 +15,7 @@
       "/img/services/staria/5.jpg"
     ],
     "pricing": [
-      {"region": "인천 공항 ↔ 서울, 경기도", "price": "100,000원"}
+      {"region": "인천 공항 ↔ 서울, 경기도", "price": "100,000원~"}
     ]
   },
   {
@@ -30,7 +30,7 @@
       "/img/services/solati/1.jpg"
     ],
     "pricing": [
-      {"region": "인천 공항 ↔ 서울, 경기도", "price": "220,000원"}
+      {"region": "인천 공항 ↔ 서울, 경기도", "price": "220,000원~"}
     ]
   },
   {
@@ -45,7 +45,7 @@
       "/img/services/sprinter_b/1.png"
     ],
     "pricing": [
-      {"region": "인천 공항 ↔ 서울, 경기도", "price": "330,000원"}
+      {"region": "인천 공항 ↔ 서울, 경기도", "price": "330,000원~"}
    ]
   },
   {
@@ -60,7 +60,7 @@
       "/img/services/sprinter_l/1.png"
     ],
     "pricing": [
-      {"region": "인천 공항 ↔ 서울, 경기도", "price": "400,000원"}
+      {"region": "인천 공항 ↔ 서울, 경기도", "price": "400,000원~"}
     ]
   }
 ]
