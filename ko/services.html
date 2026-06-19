@@ -12,7 +12,6 @@
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
-    <!-- Header -->
     <header class="bg-white/90 backdrop-blur-md border-b border-gray-200 fixed w-full top-0 z-50 shadow-sm text-nowrap">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
             <a href="index" class="block"><img src="/img/logo.jpg" alt="Logo" class="h-16 md:h-20 w-auto object-contain"></a>
@@ -53,7 +52,6 @@
         </section>
     </main>
 
-    <!-- 공통 다용도 모달 (사진 & 가격표 겸용) -->
     <div id="dynamic-modal" class="fixed inset-0 z-[60] hidden bg-black/80 flex items-center justify-center p-4">
         <div class="bg-white w-full max-w-3xl max-h-[85vh] rounded-3xl overflow-hidden flex flex-col shadow-2xl">
             <div class="p-6 border-b flex justify-between items-center bg-white sticky top-0 z-10">
@@ -61,8 +59,7 @@
                 <button onclick="closeModal()" class="text-slate-400 hover:text-black text-3xl leading-none">&times;</button>
             </div>
             <div id="modal-content" class="overflow-y-auto p-4 md:p-8 space-y-6 bg-slate-50">
-                <!-- JS에서 컨텐츠 삽입 -->
-            </div>
+                </div>
             <div class="p-6 border-t bg-white flex flex-col sm:flex-row gap-3">
                 <button onclick="closeModal()" class="flex-1 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition">닫기</button>
                 <a href="contact" class="flex-[2] py-3 bg-[#102C57] text-white text-center rounded-xl font-bold hover:bg-[#1a3e75] transition">이 차량 예약 문의하기</a>
@@ -70,7 +67,6 @@
         </div>
     </div>
 
-    <!-- Global Footer -->
     <footer class="bg-[#0A1A33] text-slate-400 py-12 mt-auto">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:flex justify-between items-center mb-8">
@@ -103,7 +99,6 @@
                 container.innerHTML = data.map((item, index) => `
                     <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col md:flex-row transition hover:shadow-xl group">
                         
-                        <!-- 좌측: 큼직한 이미지 영역 (클릭 시 사진 띄우기) -->
                         <div class="md:w-1/2 h-72 md:h-auto min-h-[320px] overflow-hidden bg-slate-100 cursor-pointer relative" onclick="openModal(${index}, 'image')">
                             <img src="${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/800x600?text=Vehicle'">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 flex items-center justify-center">
@@ -111,14 +106,12 @@
                             </div>
                         </div>
                         
-                        <!-- 우측: 텍스트 및 버튼 영역 -->
                         <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
                             <p class="text-sm font-bold text-[#2E5C9E] mb-2">${item.sub_title}</p>
                             <h3 class="text-3xl font-black text-[#102C57] mb-6">${item.name}</h3>
                             <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8 flex-grow">${item.description}</p>
                             
                             <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                <!-- 사진 보기 버튼을 가격 안내 버튼으로 변경 -->
                                 <button onclick="openModal(${index}, 'price')" class="flex-1 bg-white border-2 border-[#102C57] text-[#102C57] font-bold py-3.5 rounded-xl hover:bg-slate-50 transition">요금표 안내</button>
                                 <a href="contact" class="flex-[1.5] bg-[#102C57] text-white text-center font-bold py-3.5 rounded-xl hover:bg-[#1a3e75] transition flex items-center justify-center">이 차량 상담 문의</a>
                             </div>
@@ -129,7 +122,7 @@
             });
         });
 
-// type 파라미터를 추가하여 사진(image)과 가격표(price)를 분기 처리
+        // type 파라미터를 추가하여 사진(image)과 가격표(price)를 분기 처리
         function openModal(index, type) {
             const item = allData[index];
             const modal = document.getElementById('dynamic-modal');
@@ -154,9 +147,8 @@
                 `).join('');
 
                 content.innerHTML = `
-                    <!-- 부가세 별도 안내 문구 추가 -->
-                    <div class="flex justify-end mb-2">
-                        <span class="text-xs font-bold text-red-500 bg-red-50 px-2 py-1 rounded border border-red-100">※ 부가세(VAT) 별도</span>
+                    <div class="flex justify-end mb-3">
+                        <span class="text-sm font-bold text-slate-800">목적지 숙소 위치에 따라 요금이 다를 수 있습니다.</span>
                     </div>
                     <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
                         <table class="w-full text-left border-collapse">
