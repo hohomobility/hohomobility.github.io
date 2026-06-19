@@ -94,7 +94,6 @@
         let allData = [];
 
         document.addEventListener('DOMContentLoaded', () => {
-            // 영문 JSON 데이터를 절대 경로로 불러오기 (루트의 data 폴더)
             fetch('data/service.json').then(r => r.json()).then(data => {
                 allData = data;
                 const container = document.getElementById('service-product-list');
