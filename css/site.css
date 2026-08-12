@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+}
+
+/* site-header/site-footer are wrapper custom elements; keep them out of the
+   box tree so flex layout (fixed header, mt-auto footer) behaves exactly as
+   if <header>/<footer> were direct children of <body>. */
+site-header,
+site-footer {
+    display: contents;
+}
+
+.modal-open {
+    overflow: hidden;
+}

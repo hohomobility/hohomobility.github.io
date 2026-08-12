@@ -5,51 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>호호모빌리티 | 환불 규정</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #F8FAFC; color: #0F172A; }
-    </style>
+    <link rel="stylesheet" href="/css/site.css">
+    <script src="/js/site-components.js" defer></script>
 </head>
 <body class="flex flex-col min-h-screen">
-    <header class="bg-white/90 backdrop-blur-md border-b border-gray-200 fixed w-full top-0 z-50 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-24">
-                <a href="index" class="flex-shrink-0 block">
-                    <img src="/img/logo.jpg" alt="HOHO mobility" class="h-16 md:h-20 w-auto object-contain">
-                </a>
-                
-                <div class="flex items-center gap-4 md:gap-8">
-                    <nav class="hidden md:flex space-x-6 lg:space-x-8">
-                        <a href="index" class="text-[#102C57] font-bold border-b-2 border-[#102C57] pb-1">Home</a>
-                        <a href="about" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">About Us</a>
-                        <a href="services" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Services</a>
-                        <a href="contact" class="text-slate-500 hover:text-[#2E5C9E] font-medium transition">Contact</a>
-                    </nav>
-
-                    <!-- Language Switcher -->
-                    <div class="flex items-center text-[10px] md:text-xs font-bold gap-2.5 bg-slate-100 px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
-                        <a href="/refund" class="flex items-center gap-1 text-slate-400 hover:text-[#102C57]">
-                            <img src="https://flagcdn.com/w20/us.png" width="16" alt="EN"> <span class="hidden sm:inline">EN</span>
-                        </a>
-                        <span class="text-slate-300">|</span>
-                        <a href="refund" class="flex items-center gap-1 text-[#102C57]">
-                            <img src="https://flagcdn.com/w20/kr.png" width="16" alt="KO"> <span class="hidden sm:inline">KO</span>
-                        </a>
-                    </div>
-
-                    <div class="md:hidden">
-                        <button id="mobile-menu-btn" class="text-slate-600 text-2xl px-2">&#9776;</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-4 flex flex-col space-y-2 shadow-lg">
-            <a href="index" class="block py-2 text-[#102C57] font-bold">Home</a>
-            <a href="about" class="block py-2 text-slate-600">About Us</a>
-            <a href="services" class="block py-2 text-slate-600">Services</a>
-            <a href="contact" class="block py-2 text-slate-600">Contact</a>
-        </div>
-    </header>
+    <site-header lang="ko"></site-header>
 
     <main class="flex-grow pt-32 pb-16 px-6">
         <div class="max-w-4xl mx-auto">
@@ -100,31 +60,6 @@
         </div>
     </main>
 
-    <footer class="bg-[#0A1A33] text-slate-400 py-12 mt-auto">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex justify-between items-center mb-8">
-                <div class="flex items-center gap-4 mb-6 md:mb-0">
-                    <img src="/img/logo.jpg" alt="Logo" class="h-14 opacity-90 mix-blend-screen bg-white rounded p-1">
-                    <p class="text-sm text-slate-300 font-medium">외국인 호스트를 위한 든든한 이동 파트너</p>
-                </div>
-                <div class="flex flex-wrap gap-4 text-xs font-medium">
-                    <a href="terms" class="hover:text-white transition">이용약관</a> | 
-                    <a href="privacy" class="hover:text-white transition">개인정보처리방침</a> | 
-                    <a href="refund" class="text-[#60A5FA] hover:text-[#93C5FD] transition font-bold">환불 규정</a>
-                </div>
-            </div>
-            <div class="text-[11px] md:text-xs text-slate-500 border-t border-slate-700 pt-8 space-y-2">
-                <p>상호명: 호호모빌리티 | 대표자: 서형주 | 사업장 소재지: 경기도 의정부시 용민로 36</p>
-                <p>고객센터: 010-6674-8253 | 이메일: hohomobility@naver.com</p>
-                <p class="mt-4">&copy; 2026 HOHO mobility. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
+    <site-footer lang="ko"></site-footer>
 </body>
 </html>
