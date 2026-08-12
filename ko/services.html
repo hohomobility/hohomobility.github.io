@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOHO Mobility | Services</title>
+    <title>호호모빌리티 | 서비스</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/css/site.css">
     <script src="/js/site-components.js" defer></script>
@@ -14,8 +14,8 @@
     <main class="flex-grow pt-32 pb-24">
         <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="mb-16 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-[#102C57] mb-4 tracking-tighter font-black">Customized Full-Lineup Dispatch Service</h2>
-                <p class="text-lg text-slate-600">All vehicles include a <strong>free meet & greet picket service and all parking/toll fees</strong>.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#102C57] mb-4 tracking-tighter font-black">맞춤형 풀라인업 배차 서비스</h2>
+                <p class="text-lg text-slate-600">모든 차량에는 <strong>무료 피켓 서비스와 모든 주차비·통행료</strong>가 포함되어 있습니다.</p>
             </div>
             
             <div id="service-product-list" class="flex flex-col gap-12"></div>
@@ -26,14 +26,14 @@
     <div id="dynamic-modal" class="fixed inset-0 z-[60] hidden bg-black/80 flex items-center justify-center p-4">
         <div class="bg-white w-full max-w-3xl max-h-[85vh] rounded-3xl overflow-hidden flex flex-col shadow-2xl">
             <div class="p-6 border-b flex justify-between items-center bg-white sticky top-0 z-10">
-                <h3 id="modal-title" class="text-xl font-bold text-[#102C57]">Information</h3>
+                <h3 id="modal-title" class="text-xl font-bold text-[#102C57]">안내</h3>
                 <button onclick="closeModal()" class="text-slate-400 hover:text-black text-3xl leading-none">&times;</button>
             </div>
             <div id="modal-content" class="overflow-y-auto p-4 md:p-8 space-y-6 bg-slate-50">
                 </div>
             <div class="p-6 border-t bg-white flex flex-col sm:flex-row gap-3">
-                <button onclick="closeModal()" class="flex-1 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition">Close</button>
-                <a href="contact" class="flex-[2] py-3 bg-[#102C57] text-white text-center rounded-xl font-bold hover:bg-[#1a3e75] transition">Inquire about this vehicle</a>
+                <button onclick="closeModal()" class="flex-1 py-3 bg-slate-100 text-slate-600 rounded-xl font-bold hover:bg-slate-200 transition">닫기</button>
+                <a href="contact" class="flex-[2] py-3 bg-[#102C57] text-white text-center rounded-xl font-bold hover:bg-[#1a3e75] transition">이 차량 문의하기</a>
             </div>
         </div>
     </div>
@@ -44,7 +44,6 @@
         let allData = [];
 
         document.addEventListener('DOMContentLoaded', () => {
-            // 영문 JSON 데이터를 절대 경로로 불러오기 (루트의 data 폴더)
             fetch('data/service.json').then(r => r.json()).then(data => {
                 allData = data;
                 const container = document.getElementById('service-product-list');
@@ -55,7 +54,7 @@
                         <div class="md:w-1/2 h-72 md:h-auto min-h-[320px] overflow-hidden bg-slate-100 cursor-pointer relative" onclick="openModal(${index}, 'image')">
                             <img src="/${item.image}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://via.placeholder.com/800x600?text=Vehicle'">
                             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition duration-300 flex items-center justify-center">
-                                <span class="bg-white/90 text-[#102C57] font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">View Detailed Photos 🔍</span>
+                                <span class="bg-white/90 text-[#102C57] font-bold px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition duration-300 transform translate-y-4 group-hover:translate-y-0">상세 사진 보기 🔍</span>
                             </div>
                         </div>
                         
@@ -65,8 +64,8 @@
                             <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-8 flex-grow">${item.description}</p>
                             
                             <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                                <button onclick="openModal(${index}, 'price')" class="flex-1 bg-white border-2 border-[#102C57] text-[#102C57] font-bold py-3.5 rounded-xl hover:bg-slate-50 transition">View Pricing</button>
-                                <a href="contact" class="flex-[1.5] bg-[#102C57] text-white text-center font-bold py-3.5 rounded-xl hover:bg-[#1a3e75] transition flex items-center justify-center">Inquire & Book</a>
+                                <button onclick="openModal(${index}, 'price')" class="flex-1 bg-white border-2 border-[#102C57] text-[#102C57] font-bold py-3.5 rounded-xl hover:bg-slate-50 transition">요금 보기</button>
+                                <a href="contact" class="flex-[1.5] bg-[#102C57] text-white text-center font-bold py-3.5 rounded-xl hover:bg-[#1a3e75] transition flex items-center justify-center">문의 및 예약</a>
                             </div>
                         </div>
 
@@ -83,13 +82,13 @@
             const content = document.getElementById('modal-content');
 
             if (type === 'image') {
-                title.innerText = `${item.name} Detailed Photos`;
+                title.innerText = `${item.name} 상세 사진`;
                 content.innerHTML = item.images.map(path => `
                     <img src="/${path}" class="w-full rounded-2xl shadow-md border-4 border-white" onerror="this.style.display='none'">
                 `).join('');
-                
+
             } else if (type === 'price') {
-                title.innerText = `${item.name} One-way Pricing by Region`;
+                title.innerText = `${item.name} 지역별 편도 요금`;
                 
                 // 표에 들어갈 내용 생성
                 let tableRows = item.pricing.map(p => `
@@ -107,8 +106,8 @@
                         <table class="w-full text-left border-collapse">
                             <thead class="bg-[#102C57] text-white">
                                 <tr>
-                                    <th class="py-3 px-4 text-sm font-bold w-2/3">Route</th>
-                                    <th class="py-3 px-4 text-sm font-bold w-1/3 text-right">Fare</th>
+                                    <th class="py-3 px-4 text-sm font-bold w-2/3">구간</th>
+                                    <th class="py-3 px-4 text-sm font-bold w-1/3 text-right">요금</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -116,7 +115,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-xs text-slate-500 mt-4">* The above prices are final and include all toll and parking fees.</p>
+                    <p class="text-xs text-slate-500 mt-4">* 상기 요금은 확정 요금이며, 모든 통행료 및 주차비가 포함되어 있습니다.</p>
                 `;
             }
 
